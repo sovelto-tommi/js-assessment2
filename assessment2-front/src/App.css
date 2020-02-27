@@ -1,0 +1,57 @@
+html {
+  background-color: gray;
+  min-height: 100%;
+}
+
+body {
+  min-width: 390px;
+}
+
+body, #root {
+  min-height: 100%;
+  background: transparent;
+}
+.App {
+  margin: 1em auto;
+  width: 95%;
+  min-height: 100%;
+}
+
+.Content {
+  margin: 60pt auto;  
+  width: 95%;
+  border: 4pt solid lightgray;
+  padding: 1em;
+  color: lightgray;
+  background-color: gray;
+}
+
+.Home .jumbotron {
+  color: black;
+}
+
+.linkspan {
+  color: blue;
+}
+
+a, .link {
+  color: blue;
+}
+
+.linkspan:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.list-group-item.active {
+  background-color: darkgray;
+  border-color: darkgrey;
+}
+
+.App .tab-content {
+  color: white;
+}
+
+.App .tab-content code {
+  color: greenyellow;
+}
