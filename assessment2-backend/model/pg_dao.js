@@ -12,7 +12,6 @@ const PASSWORD = process.env.PGPASSWORD;
 */
 // <toteuta>
 function getAllScooters() {
-
 }
 
 function getSingleScooter() {

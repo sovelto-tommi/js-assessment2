@@ -3,13 +3,12 @@ CREATE TABLE IF NOT EXISTS models (
     name varchar(127) NOT NULL UNIQUE
 );
 
--- TODO: luo scooters-taulu
-/*
-Sarakkeet: id, model, lat, lon, max_electricity, current_electricity, added
-
-model viittaa models-tauluun, lisää siis foreign key constraint
-
-added kentälle oletusarvo tämä päivä
-
-pakolliset kentät: model, max_electricity, added
-*/
+CREATE TABLE IF NOT EXISTS scooters (
+    id SERIAL PRIMARY KEY,
+    model INTEGER NOT NULL,
+    lat DOUBLE PRECISION,
+    lon DOUBLE PRECISION,
+    max_electricity INTEGER NOT NULL,
+    current_electricity INTEGER,
+    added DATE NOT NULL DEFAULT CURRENT_DATE
+);
