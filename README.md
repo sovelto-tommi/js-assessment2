@@ -36,3 +36,35 @@ Front-endina React-sovellus. Se näyttää jo tomivan jollakin tavalla, mutta os
 - Hae skuuttilista palvelimelta ja näytä se listalla (poista pohjassa käytetty vakiodata)
 - toteuta yhden skuutin detaljien näyttäminen
 - toteuta uuden skuutin tietojen lähettäminen palvelimelle
+
+## Taso 2
+
+Tason 2 läpäistäksesi täytyy toteuttaa taso 1, ja sen jälkeen
+kolme lisätoiminnallisuutta.
+
+### 1. Skuuttien CRUD
+
+Frontin detaljinäkymään (tasossa 1 tehty uusi komponentti) seuraava toiminnallisuus:
+
+- Skuutin voi poistaa
+- Skuutin tietoja voi muuttaa
+
+Tämä vaatii luonnollisesti myös toteutusta backiin.
+
+### 2. Skuuttilistan filtteröinti
+
+Listanäkymään tehtävä mahdollisuus filtteröidä näytettäviä skuutteja, eli näytetään vain käyttäjän valitsemien kriteerien täyttävät skuutit. Toteutettavat kriteerit:
+- Akun tila vähintään prosenttia
+- Skuutin malli, vain tietyn malliset skuutit. Ei tarvitse toteuttaa useamman halutun mallin perusteella filtteröintiä.
+
+Oletuksena sivu siis näyttää kaikki skuutit, mutta käyttäjälle annettava mahdollisuus rajoittaa näytettäviä skuutteja halutessaan. Tämän voi tehdä esimerkiksi listan yläpuolelle lisättävien lomakekenttien avulla. Riittää että yksi filtteri kerrallaan voi olla käytössä.
+
+### 3. Skuuttimalleille CRUD
+
+Lisäksi on toteutettava CRUD toiminnallisuus skuuttimalleille, eli
+- Kaikkien mallien listaaminen
+- Uuden mallin lisääminen
+- Mallin tietojen muuttaminen
+- Mallin poistaminen, tämä saa onnistua vain **jos** mallista
+ei ole yhtään skuuttia käytössä. Jos poistaminen epäonnistuu, niin käyttöliittymän on kerrottava syy käyttäjälle
+
