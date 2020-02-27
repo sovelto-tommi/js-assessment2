@@ -4,7 +4,7 @@ class Scooter {
         this.model = {id: model, name: modelname};
         this.position = {lat, lon};
         this.electricity = {max: max_electricity, current: current_electricity};
-        this.added = added
+        this.added = new Date(added).toISOString().split('T')[0]
     }
 }
 
