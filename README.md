@@ -1,6 +1,6 @@
-# Assessment test 2
+# Assessment test 2 :kick_scooter:
 
-Tehtävänä on jatkaa skuutteja vuokraavan yrityksen tilaman Full stack-ohjelmiston toteutusta. Tämän sprintin backlogiin kuuluu skuuttien :kick_scooter: hallinnan toteutus: tietokantaan, backendiin ja fronttiin.
+Tehtävänä on jatkaa skuutteja vuokraavan yrityksen tilaman Full stack-ohjelmiston toteutusta. Tämän sprintin backlogiin kuuluu skuuttien  hallinnan toteutus: tietokantaan, backendiin ja fronttiin.
 
 Koska kyseessä ei ole ensimmäinen sprintti projektissa, ja tiimiin kuuluu muitakin Developereita niin pääset jo osaksi toteutettujen projektien pariin. Onneksi joitakin README.md tiedostoja on lisätty kertomaan mitä pitäisi tehdä, lisäksi lähdekoodeissa on useita TODO-kommentteja jotka kertovat lisää. Ketterästi kun tehdään, niin esimerkiksi osa testeistä tähänkin featureen on jo toteutettu, ja ne antavat luonnollisesti lisävinkkiä siitä mitä pitäisi saada tehtyä.
 
@@ -34,10 +34,12 @@ Front-endina React-sovellus. Se näyttää jo tomivan jollakin tavalla, mutta os
 - Hae skuuttilista palvelimelta ja näytä se listalla (poista pohjassa käytetty vakiodata)
 - toteuta yhden skuutin detaljien näyttäminen
 
+<hr/>
+
 ## Taso 2
 
 Tason 2 läpäistäksesi täytyy toteuttaa taso 1, ja sen jälkeen
-kolme lisätoiminnallisuutta.
+toteuttaa kaksi alla kuvatusta kolmesta lisätoiminnallisuudesta.
 
 ### 1. Skuuttien CRUD
 
