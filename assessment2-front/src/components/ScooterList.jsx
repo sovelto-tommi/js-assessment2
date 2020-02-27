@@ -9,14 +9,7 @@ export default class ScooterList extends Component {
     getAllScooters().then(scoots => this.setState({scoots}))
   }
   render () {
-    /* TODO: Poista dummydata alta, ja korvaa se hakemalla
-    varsinaiset tiedot palvelimelta. Muista tehdä 
-    haku services/apiservices.js moduulissa ja sen
-    getAllScooters() funktiossa. Tähän komponenttiin vain 
-    kyseisen funktion kutsu */
-    // <clip>
     const scoots = this.state.scoots.map(s => <Scooter key={s.id} scooter={s} {...this.props}/>)
-    // </clip>
     return (
       <div>
         <h1>Available scooters</h1>

@@ -14,7 +14,13 @@ export function getAllScooters() {
     });    
 }
 export function getSingleScooter(id) {
-    throw new Error("Not implemented");
+    return fetch(`/api/scooters/${id}`).then(resp=>{
+        if (resp.status !== 200) {
+            console.error("Heitetään virhe");
+            throw new Error(`Unable to fetch, status: ${resp.status}`)
+        }
+        return resp.json();
+    });        
 }
 export function postSingleScooter(scooter) {
     throw new Error("Not implemented");
