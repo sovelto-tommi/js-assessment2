@@ -13,13 +13,16 @@ Palvelin tarjoaa rajapinnan skuuttien (scooter) käsittelyyn. Kuhunkin skuuttiin
 Tietokannan alustamiseen käytetään SQL-tiedostoja, jotka
 voidaan ajaa `psql`-ohjelmalla `\i` komennolla. Tämä osuus vaatii siis puhtaan SQL-koodin kirjoittamista. Tähän osuuteen löytyy lisää ohjeita `sql`-hakemistosta. Lyhyesti:
 
-- Luo taulu, johon voi tallettaa skoottereita
-- Alusta taulu muutamalla skootterilla
+- Luo taulu, johon voi tallettaa skuutteja
+- Alusta taulu muutamalla skuutilla
 
 ### Tietokantakäsittely
 
 Projektiin on jo lisätty PostgreSQL ajuri, sekä DAO-moduuli
 tietokannan käsittelyyn. Tehtävänä on siis vain päivittää kyseinen moduuli, sekä tehdä apuluokka joka helpottaa tarvittavan JSON dokumentin luomista.
+
+Tietokannan yhteys muodostetaan käyttämällä `.env` tiedostosta luettavilla käyttäjätunnuksella ja salasanalla.
+Nämä tiedot eivät ole soveliaita julkistaa GitHubissa, joten `.env` on `.gitignore`ssa ja täytyy siis lisätä projektiin (`sample.env` toimii hyvänä pohjana).
 
 - `pg_dao.js` sisältää yhteydenoton kantaan, mutta siitä puuttuu *scooters* taulun käsittelyfunktioiden toteutus. Myös yhteyden muodostamiseen vaadittavat käyttöjätunnus ja salasana täytyy ottaa käyttöön `.env` tiedosto toteuttamalla. Katso esimerkiksi `sample.env`
 - `scooter.js` tiedostoon on tarkoitus toteuttaa luoka Scooter, jonka tehtävä on lähinnä helpottaa tietokannasta saadun datan muotoilemista vaadittavaan JSON-muotoon. Luokka siis vaatii käytännössä vain konstruktorin, joka lisää sopivat jäsenet saamistaan parametreista
