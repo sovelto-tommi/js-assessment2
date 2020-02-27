@@ -7,7 +7,7 @@ require('dotenv').config();
 const USER = process.env.PGUSER;
 const PASSWORD = process.env.PGPASSWORD;
 
-/* Toteuta seuraavat kolme funktiota
+/* Toteuta seuraavat kaksi funktiota
    Lisää tarvittavat parametrit funktioille
 */
 // <toteuta>
@@ -19,9 +19,6 @@ function getSingleScooter() {
 
 }
 
-function saveScooter() {
-
-}
 // </toteuta>
 
 
@@ -52,4 +49,4 @@ function getAllModels() {
           )
 }
 
-module.exports = {getAllModels, getAllScooters, getSingleScooter, saveScooter};
+module.exports = {getAllModels, getAllScooters, getSingleScooter};

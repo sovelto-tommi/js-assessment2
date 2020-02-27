@@ -31,9 +31,6 @@ export const Home = () => {
                 <ListGroup.Item action href="#link3" as={Link} to='#link3'>
                 <code>components/ScooterDetail.jsx</code>
                 </ListGroup.Item>
-                <ListGroup.Item action href="#link4" as={Link} to='#link4'>
-                <code>components/ScooterForm.jsx</code>
-                </ListGroup.Item>
                 <ListGroup.Item action href="#link5" as={Link} to='#link5'>
                 <code>services/apiservice.js</code>
                 </ListGroup.Item>
@@ -61,15 +58,15 @@ export const Home = () => {
                 näyttäminen. Halutut tiedot:</p>
                 <ul>
                     <li>Skuutin malli</li>
+                    <li>Skuutin id</li>
                     <li>Skuutin sijainti koordinaatteina</li>
                     <li>Skuutin maksimienergia</li>
                     <li>Skuutin nykyinen energia</li>
                     <li>Skuutin käyttöönottopäivä</li>
                 </ul>
-                </Tab.Pane>
-                <Tab.Pane eventKey='#link4'>
-                <p>Lomake on muuten toteutettu, mutta siitä puuttuu tietojen lähettäminen palvelimelle.</p>
-                <p>Toteuta siis luokan alusta löytyvä <code>submitForm</code>-funktio toimivaksi.</p>
+                <p>Ulkoasun säätämiseen ei tarvitse käyttää paljon aikaa, esim. muutama lyhyt
+                  paragraph (&lt;p&gt;), joissa halutut tiedot normitekstinä riittää mainiosti.
+                </p>
                 </Tab.Pane>
                 <Tab.Pane eventKey='#link5'>
                 <p>Tähän moduuliin on toteutettava palvelimelle tehtävät API-kutsut.</p>
@@ -78,7 +75,6 @@ export const Home = () => {
                 <ul>
                 <li><code>getAllScooters</code> hakee kaikki skuutit</li>
                 <li><code>getSingleScooter</code> hakee yhden skuutin sen id:n perusteella</li>
-                <li><code>postSingleScooter</code> lähettää yhden skuutin luotavaksi palvelimelle</li>
                 </ul>
                 </Tab.Pane>
               </Tab.Content>

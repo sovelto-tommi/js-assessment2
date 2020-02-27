@@ -21,12 +21,10 @@ Nämä JavaScriptillä
 - Toteuta tietokantakäsittely *scooters* tauluun
     * Hae kaikki
     * Hae yksi id:llä
-    * Lisää uusi
 - Toteuta yhteysoptioiden käyttäjätunnuksen ja salasanan haku `.env` tiedostosta
 - Toteuta REST-rajapinta samoille toiminnoille kuin tietokantakäsittelyyn, eli 
     * Hae kaikki
     * Hae yksi id:llä
-    * Lisää uusi
 - Toteuta apuluokka `Scooters` jonka avulla tietokannasta haettu tieto muutetaan sopivan muotoiseksi JSONiksi
 
 ### Front-end
@@ -35,7 +33,6 @@ Front-endina React-sovellus. Se näyttää jo tomivan jollakin tavalla, mutta os
 
 - Hae skuuttilista palvelimelta ja näytä se listalla (poista pohjassa käytetty vakiodata)
 - toteuta yhden skuutin detaljien näyttäminen
-- toteuta uuden skuutin tietojen lähettäminen palvelimelle
 
 ## Taso 2
 
@@ -46,6 +43,7 @@ kolme lisätoiminnallisuutta.
 
 Frontin detaljinäkymään (tasossa 1 tehty uusi komponentti) seuraava toiminnallisuus:
 
+- Skuutin voi lisätä (tähän valmis käyttöliittymä, komponentissa `ScooterForm`)
 - Skuutin voi poistaa
 - Skuutin tietoja voi muuttaa
 

@@ -5,8 +5,6 @@ import { Row, Col } from 'react-bootstrap'
 import { getAllModels } from '../services/apiservice'
 
 export default class ScooterForm extends Component {
-  // TODO: toteuta tämä, muita muutoksia ei tarvita.
-  // lähetettävät tiedot this.state.scooter -muuttujassa
   submitForm = evt => {
     evt.preventDefault()
     console.error("ASSESSMENT TEST:", "Submit the form data!");
@@ -132,7 +130,8 @@ export default class ScooterForm extends Component {
           <Button onClick={this.submitForm} variant='light'>
             Submit
           </Button>
-        </p></>
+        </p>
+        <p><small>Tähän komponenttiin ei tarvitse Tason 1 vaiheessa koskea.</small></p></>
         :
         <p>Initializing...</p>
         }

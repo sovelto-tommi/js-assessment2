@@ -1,4 +1,4 @@
-// TODO: toteuta seuraavat kolme funktiota
+// TODO: toteuta seuraavat kaksi funktiota
 // Saat tarvittaessa muuttaa parametreja
 // esimerkiksi XHR:n vaatiman callback-funktion
 // välittämiseksi (jos siis käytät XHR:ia mieluumin
@@ -8,9 +8,6 @@ export function getAllScooters() {
     throw new Error("Not implemented");
 }
 export function getSingleScooter(id) {
-    throw new Error("Not implemented");
-}
-export function postSingleScooter(scooter) {
     throw new Error("Not implemented");
 }
 
