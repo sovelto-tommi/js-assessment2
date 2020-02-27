@@ -23,7 +23,20 @@ export function getSingleScooter(id) {
     });        
 }
 export function postSingleScooter(scooter) {
-    throw new Error("Not implemented");
+    return fetch(`/api/scooters`, {
+        method: 'POST',
+        body: JSON.stringify(scooter),
+        headers: {
+            'Content-Type': 'application/json'
+          },
+    }).then(resp=>{
+        if (resp.status !== 201) {
+            console.error("Heitetään virhe");
+            throw new Error(`Unable to fetch, status: ${resp.status}`)
+        }
+        return resp.json();
+    });        
+    
 }
 
 // Valmis metodi, ei tarvitse koskea. Formi käyttää tätä

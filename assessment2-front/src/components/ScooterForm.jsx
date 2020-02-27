@@ -2,17 +2,20 @@ import React, { Component } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import { Row, Col } from 'react-bootstrap'
-import { getAllModels } from '../services/apiservice'
+import { getAllModels, postSingleScooter } from '../services/apiservice'
 
 export default class ScooterForm extends Component {
   // TODO: toteuta tämä, muita muutoksia ei tarvita.
   // lähetettävät tiedot this.state.scooter -muuttujassa
   submitForm = evt => {
     evt.preventDefault()
-    console.error("ASSESSMENT TEST:", "Submit the form data!");
-    console.group('Submitting');
-    console.log(this.state.scooter);
-    console.groupEnd();
+    // console.error("ASSESSMENT TEST:", "Submit the form data!");
+    // console.group('Submitting');
+    // console.log(this.state.scooter);
+    // console.groupEnd();
+    postSingleScooter(this.state.scooter).then(res=> {
+      this.props.history.push('/list')
+    })
   }
 
   state = {
