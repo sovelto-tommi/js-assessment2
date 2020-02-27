@@ -40,6 +40,10 @@ export default class ScooterList extends Component {
         added: '2019-07-14'
       }
     ]
+    console.groupCollapsed("Skuutti JSON");
+    console.log("Yksi skuutti", JSON.stringify(dummydata[0]))
+    console.log("Kaikki skuutit", JSON.stringify(dummydata))
+    console.groupEnd()
     const scoots = dummydata.map(s => <Scooter key={s.id} scooter={s} {...this.props}/>)
     // </clip>
     return (
