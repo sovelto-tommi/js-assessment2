@@ -13,9 +13,9 @@ const PASSWORD = process.env.PGPASSWORD;
 */
 // <toteuta>
 function getAllScooters() {
-  return pool.query('SELECT * FROM scooters')
+  return pool.query('SELECT scooters.*, models.name modelname FROM scooters JOIN models ON scooters.model=models.id')
   .then(res => res.rows.map(s => 
-    new Scooter(s.id, s.model, s.lat, s.lon, s.max_electricity, s.current_electricity, s.added)
+    new Scooter(s.id, s.model, s.lat, s.lon, s.max_electricity, s.current_electricity, s.added, s.modelname)
     ))
   .catch(err =>
       setImmediate(() => {

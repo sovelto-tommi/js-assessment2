@@ -5,7 +5,13 @@
 // kuin fetchiä)
 
 export function getAllScooters() {
-    throw new Error("Not implemented");
+    return fetch('/api/scooters').then(resp=>{
+        if (resp.status !== 200) {
+            console.error("Heitetään virhe");
+            throw new Error(`Unable to fetch, status: ${resp.status}`)
+        }
+        return resp.json();
+    });    
 }
 export function getSingleScooter(id) {
     throw new Error("Not implemented");
