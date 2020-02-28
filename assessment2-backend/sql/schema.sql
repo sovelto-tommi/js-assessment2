@@ -5,10 +5,11 @@ CREATE TABLE IF NOT EXISTS models (
 
 CREATE TABLE IF NOT EXISTS scooters (
     id SERIAL PRIMARY KEY,
-    model INTEGER NOT NULL,
+    model INTEGER NOT NULL REFERENCES models(id),
     lat DOUBLE PRECISION,
     lon DOUBLE PRECISION,
     max_electricity INTEGER NOT NULL,
     current_electricity INTEGER,
     added DATE NOT NULL DEFAULT CURRENT_DATE
 );
+
