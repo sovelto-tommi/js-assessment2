@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getSingleScooter } from '../services/apiservice'
+import { Spinner } from 'react-bootstrap';
 
 export default class ScooterDetail extends Component {
     state = { scooter: null }
@@ -8,7 +9,10 @@ export default class ScooterDetail extends Component {
         getSingleScooter(id).then(scooter => {console.log("Found", scooter); this.setState({scooter})});
     }
     render() {
-        if (!this.state.scooter) return <p>Loading..</p>
+        if (!this.state.scooter) 
+            return <Spinner animation="border" role="status">
+                    <span className="sr-only">Loading...</span>
+                </Spinner>
         console.log(this.state.scooter);
         const {model, position, electricity, added} = this.state.scooter
         return (

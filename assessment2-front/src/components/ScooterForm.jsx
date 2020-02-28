@@ -1,29 +1,23 @@
 import React, { Component } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Spinner } from 'react-bootstrap'
 import { getAllModels, postSingleScooter } from '../services/apiservice'
 
 export default class ScooterForm extends Component {
-  // TODO: toteuta tämä, muita muutoksia ei tarvita.
-  // lähetettävät tiedot this.state.scooter -muuttujassa
   submitForm = evt => {
     evt.preventDefault()
-    // console.error("ASSESSMENT TEST:", "Submit the form data!");
-    // console.group('Submitting');
-    // console.log(this.state.scooter);
-    // console.groupEnd();
     postSingleScooter(this.state.scooter).then(res=> {
       this.props.history.push('/list')
     })
   }
 
   state = {
-    // Some initial data
+    // default values for the form
     scooter: {
       model: '2',
       position: { lat: 60.24561, lon: 23.2875 },
-      electricity: { max: 500, current: 0 },
+      electricity: { max: 0, current: 0 },
       added: '2020-01-14'
     },
     models: [],
@@ -137,7 +131,10 @@ export default class ScooterForm extends Component {
           </Button>
         </p></>
         :
-        <p>Initializing...</p>
+        <div>Initializing... <Spinner animation="border" role="status">
+                <span className="sr-only">Loading...</span>
+            </Spinner>
+        </div>
         }
       </div>
     )
